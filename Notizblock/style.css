@@ -1,0 +1,77 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #a0928f;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: #6d597a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    color: #452229;
+    margin-top: 20px;
+}
+
+#content, #archiv_content, #trash_content {
+    background: #fffae6;
+    border: 2px dashed #6d597a;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    min-height: 100px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    background: #ffeb99;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', monospace;
+    border-left: 5px solid #b56576;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.inputField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background: #b81102ba;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #b56576;
+}
+
+button:nth-child(2) {
+    background: #705a7f;
+}
+
+button:nth-child(2):hover {
+    background: #2f2e2e;
+}

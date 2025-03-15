@@ -75,9 +75,8 @@ function pushToTrash(indexNote) {
     trashNotes.push(trashNote); 
     let trashNoteTitle = notesTitles.splice(indexNote, 1); 
     trashNotesTitles.push(trashNoteTitle); 
-    renderNotes();
-    renderTrashNotes(); 
-    saveToLocalStorage();
+    
+    renderAllsNotes();
 }
 
 function pushBackToTrash(indexArchivNote) { 
@@ -85,10 +84,8 @@ function pushBackToTrash(indexArchivNote) {
     trashNotes.push(archivNote); 
     let archivNoteTitle = archivNotesTitles.splice(indexArchivNote, 1); 
     trashNotesTitles.push(archivNoteTitle);
-    renderNotes(); 
-    renderTrashNotes(); 
-    renderArchivNotes(); 
-    saveToLocalStorage();
+    
+    renderAllsNotes();
 }
 
 function pushToArchiv(indexTrashNote) { 
@@ -96,10 +93,8 @@ function pushToArchiv(indexTrashNote) {
     archivNotes.push(archivNote); 
     let archivNoteTitle = trashNotesTitles.splice(indexTrashNote, 1); 
     archivNotesTitles.push(archivNoteTitle);
-    renderNotes(); 
-    renderTrashNotes(); 
-    renderArchivNotes(); 
-    saveToLocalStorage();
+    
+    renderAllsNotes();
 }
 
 function pushFromNotesToArchiv(indexNote) { 
@@ -107,28 +102,22 @@ function pushFromNotesToArchiv(indexNote) {
     archivNotes.push(archivNote); 
     let archivNoteTitle = notesTitles.splice(indexNote, 1); 
     archivNotesTitles.push(archivNoteTitle); 
-    renderNotes(); 
-    renderTrashNotes(); 
-    renderArchivNotes(); 
-    saveToLocalStorage();
+    
+    renderAllsNotes();
 }
 
 function deleteTrashNote(indexTrashNote) { 
     trashNotes.splice(indexTrashNote, 1);
     trashNotesTitles.splice(indexTrashNote, 1);
-    renderNotes(); 
-    renderTrashNotes(); 
-    renderArchivNotes(); 
-    saveToLocalStorage();
+    
+    renderAllsNotes();
 }
 
 function deleteNote(indexArchivNote) { 
     archivNotes.splice(indexArchivNote, 1);
     archivNotesTitles.splice(indexArchivNote, 1);
-    renderNotes(); 
-    renderTrashNotes(); 
-    renderArchivNotes(); 
-    saveToLocalStorage();
+   
+    renderAllsNotes();
 }
 
 function saveToLocalStorage() {
@@ -166,4 +155,11 @@ function getFromLocalStorage() {
     if (myArrArchivTitle != null) {
         archivNotesTitles = myArrArchivTitle;
     }
+}
+
+function renderAllsNotes() {
+    renderNotes(); 
+    renderTrashNotes(); 
+    renderArchivNotes(); 
+    saveToLocalStorage();
 }

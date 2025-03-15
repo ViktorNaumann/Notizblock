@@ -1,11 +1,11 @@
-let notesTitles = [];
-let notes = [];
-
-let trashNotesTitles = [];
-let trashNotes = []; 
-
-let archivNotesTitles =[];
-let archivNotes = [];
+let allNotes = {
+    'notes':['Banana', 'Kerne'],
+    'notesTitles':['essen', 'spucken'],
+    'trashNotes':[],
+    'trashNotesTitles':[],
+    'archivNotes':[],
+    'archivNotesTitles':[],
+}
 
 function unit() {
     getFromLocalStorage();
